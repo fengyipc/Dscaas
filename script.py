@@ -32,7 +32,7 @@ browser = webdriver.Chrome()
 browser.get(url)
 sleep(5)
 
-login_flag = False
+signin_flag = False
 while(not login_flag):
     try:
         #点击登录按钮
@@ -45,7 +45,7 @@ while(not login_flag):
         sleep(1)
         #确认登录
         browser.find_element_by_id('ext-gen106').click()
-        login_flag = True
+        signin_flag = True
     except:
         browser.refresh()
     sleep(3)
